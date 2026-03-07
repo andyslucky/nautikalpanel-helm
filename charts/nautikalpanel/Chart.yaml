@@ -8,7 +8,4 @@ keywords:
   - game-server
   - orchestration
   - kubernetes
-home: https://github.com/nautikalpanel/nautikalpanel
-maintainers:
-  - name: Nautikalpanel
-    email: maintainers@nautikalpanel.io
+home: https://andyslucky.github.io/nautikalpanel/
