@@ -7,10 +7,10 @@ metadata:
 rules:
 - apiGroups: [""]
   resources: ["pods", "services", "persistentvolumeclaims", "secrets"]
-  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete", "deletecollection"]
 - apiGroups: [""]
   resources: ["pods/log"]
-  verbs: ["get"]
+  verbs: ["get", "watch", "list"]
 - apiGroups: [""]
   resources: ["events"]
   verbs: ["get", "list", "watch"]
