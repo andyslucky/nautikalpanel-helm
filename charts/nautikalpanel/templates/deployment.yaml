@@ -45,8 +45,6 @@ spec:
           value: {{ .Values.config.server.port | quote }}
         - name: NAUTIKAL__KUBERNETES__NAMESPACE
           value: {{ .Values.config.kubernetes.namespace | quote }}
-        - name: NAUTIKAL__KUBERNETES__CREATE_NAMESPACE
-          value: {{ .Values.config.kubernetes.createNamespace | quote }}
         - name: NAUTIKAL__KUBERNETES__DEFAULT_STORAGE_CLASS
           value: {{ .Values.config.kubernetes.defaultStorageClass | quote }}
         - name: NAUTIKAL__KUBERNETES__INIT_TEMPLATE

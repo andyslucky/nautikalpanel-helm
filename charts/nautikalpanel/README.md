@@ -83,7 +83,6 @@ The following table lists the configurable parameters of the Nautikalpanel chart
 | `config.server.host` | Server host | `0.0.0.0` |
 | `config.server.port` | Server port | `9090` |
 | `config.kubernetes.namespace` | Kubernetes namespace for game servers | `nautikal` |
-| `config.kubernetes.createNamespace` | Create namespace if it doesn't exist | `true` |
 | `config.kubernetes.defaultStorageClass` | Default storage class for game servers | `""` |
 | `config.kubernetes.initTemplate` | Initial template path | `default/init.yaml.jinja` |
 | `config.kubernetes.podTemplate` | Pod template path | `default/pod_template.yaml.jinja` |
@@ -150,7 +149,6 @@ The secret should contain a key named `github-token` with the GitHub token value
 
 The chart creates a `ClusterRole` and `ClusterRoleBinding` with the following permissions:
 
-- `get`, `list`, `create` on `namespaces`
 - `get`, `list`, `watch`, `create`, `update`, `patch`, `delete` on `pods`, `services`, `persistentvolumeclaims`, `secrets`
 - `get` on `pods/log`
 - `get`, `list`, `watch` on `events`

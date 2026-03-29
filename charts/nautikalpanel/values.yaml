@@ -58,7 +58,6 @@ config:
     port: 9090
   kubernetes:
     namespace: nautikal
-    createNamespace: true
     defaultStorageClass: ""
     initTemplate: "default/init.yaml.jinja"
     podTemplate: "default/pod_template.yaml.jinja"
