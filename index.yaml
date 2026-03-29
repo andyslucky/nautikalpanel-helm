@@ -3,6 +3,22 @@ entries:
   nautikalpanel:
   - apiVersion: v2
     appVersion: 0.1.0
+    created: "2026-03-29T17:42:52.800154996Z"
+    description: Helm chart for Nautikalpanel - A game server orchestration platform
+      for Kubernetes
+    digest: 2ec3a11d95f990ed173facd3941b26875de6cfaf1e0c64e868bce2afb7ba3adf
+    home: https://andyslucky.github.io/nautikalpanel/
+    keywords:
+    - game-server
+    - orchestration
+    - kubernetes
+    name: nautikalpanel
+    type: application
+    urls:
+    - https://github.com/andyslucky/nautikalpanel-helm/releases/download/nautikalpanel-0.1.03/nautikalpanel-0.1.03.tgz
+    version: 0.1.03
+  - apiVersion: v2
+    appVersion: 0.1.0
     created: "2026-03-29T14:41:37.869358195Z"
     description: Helm chart for Nautikalpanel - A game server orchestration platform
       for Kubernetes
@@ -33,4 +49,4 @@ entries:
     urls:
     - https://github.com/andyslucky/nautikalpanel-helm/releases/download/nautikalpanel-0.1.01/nautikalpanel-0.1.01.tgz
     version: 0.1.01
-generated: "2026-03-29T14:41:37.869368033Z"
+generated: "2026-03-29T17:42:52.800168702Z"
