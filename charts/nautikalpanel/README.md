@@ -12,7 +12,7 @@ This Helm chart installs [Nautikalpanel](https://github.com/nautikalpanel/nautik
 ### Add the Helm repository (if published)
 
 ```bash
-helm repo add nautikalpanel https://charts.nautikalpanel.io
+helm repo add nautikalpanel https://andyslucky.github.io/nautikalpanel-helm
 helm repo update
 ```
 
