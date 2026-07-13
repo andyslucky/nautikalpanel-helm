@@ -21,8 +21,8 @@ config:
     namespace: nautikal
     name: nautikal
   paths:
-    k8sTemplates: "/templates/k8s-templates"
-    gameServerTemplates: "/templates/game-server-templates"
+    k8sTemplates: ""
+    gameServerTemplates: ""
   prometheus:
     url: "http://kube-prometheus-stack-prometheus.prometheus.svc.cluster.local:9090"
     pollRateSeconds: 10
@@ -115,10 +115,3 @@ persistence:
     size: 10Gi
     globalMounts:
       - path: /data
-
-  templates:
-    enabled: true
-    type: configMap
-    name: '{{ include "bjw-s.common.lib.chart.names.fullname" . }}-templates'
-    globalMounts:
-      - path: /templates

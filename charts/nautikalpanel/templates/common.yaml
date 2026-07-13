@@ -5,8 +5,6 @@
 {{- $tag := .Values.controllers.main.containers.main.image.tag -}}
 controllers:
   main:
-    annotations:
-      checksum/config: '{{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}'
     containers:
       main:
         {{- if eq $tag "" }}
