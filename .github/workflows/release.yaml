@@ -21,6 +21,23 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
+      - name: Install Helm
+        uses: azure/setup-helm@v4
+        with:
+          version: v3.15.0
+
+      - name: Add dependency chart repos
+        run: |
+          helm repo add bjw-s https://bjw-s-labs.github.io/helm-charts
+
+      - name: Update chart dependencies
+        run: |
+          for dir in charts/*/; do
+            if [ -f "$dir/Chart.yaml" ]; then
+              helm dependency update "$dir"
+            fi
+          done
+
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.6.0
         env:
