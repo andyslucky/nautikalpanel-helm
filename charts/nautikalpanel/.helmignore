@@ -22,5 +22,4 @@
 *.tmproj
 .vscode/
 README.md
-charts/
 Chart.lock

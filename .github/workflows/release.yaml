@@ -30,11 +30,11 @@ jobs:
         run: |
           helm repo add bjw-s https://bjw-s-labs.github.io/helm-charts
 
-      - name: Build chart dependencies
+      - name: Update chart dependencies
         run: |
           for dir in charts/*/; do
             if [ -f "$dir/Chart.yaml" ]; then
-              helm dependency build "$dir"
+              helm dependency update "$dir"
             fi
           done
 

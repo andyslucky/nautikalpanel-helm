@@ -29,7 +29,7 @@ jobs:
         run: |
           for dir in charts/*/; do
             if [ -f "$dir/Chart.yaml" ]; then
-              helm dependency build "$dir"
+              helm dependency update "$dir"
             fi
           done
 
@@ -64,7 +64,7 @@ jobs:
         run: |
           for dir in charts/*/; do
             if [ -f "$dir/Chart.yaml" ]; then
-              helm dependency build "$dir"
+              helm dependency update "$dir"
             fi
           done
 
