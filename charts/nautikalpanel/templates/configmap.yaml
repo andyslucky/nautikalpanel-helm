@@ -1,15 +1,13 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ include "nautikalpanel.fullname" . }}-templates
+  name: {{ include "bjw-s.common.lib.chart.names.fullname" . }}-templates
   labels:
-    {{- include "nautikalpanel.labels" . | nindent 4 }}
+    {{- include "bjw-s.common.lib.metadata.allLabels" . | nindent 4 }}
 data:
-  {{- range $path, $_ := .Files.Glob "templates/k8s-templates/**" }}
-  {{ $path | base }}: |
-{{- $.Files.Get $path | indent 4 }}
+  {{- range $path, $_ := .Files.Glob "k8s-templates/**" }}
+  {{ $path | base }}: |{{- $.Files.Get $path | nindent 4 }}
   {{- end }}
-  {{- range $path, $_ := .Files.Glob "templates/game-server-templates/**" }}
-  {{ $path | base }}: |
-{{- $.Files.Get $path | indent 4 }}
+  {{- range $path, $_ := .Files.Glob "game-server-templates/**" }}
+  {{ $path | base }}: |{{- $.Files.Get $path | nindent 4 }}
   {{- end }}
