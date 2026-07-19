@@ -84,13 +84,7 @@ The following table lists the configurable parameters of the Nautikalpanel chart
 | `config.server.port` | Server port | `9090` |
 | `config.kubernetes.namespace` | Kubernetes namespace for game servers | `nautikal` |
 | `config.kubernetes.defaultStorageClass` | Default storage class for game servers | `""` |
-| `config.kubernetes.initTemplate` | Initial template path | `default/init.yaml.jinja` |
-| `config.kubernetes.podTemplate` | Pod template path | `default/pod_template.yaml.jinja` |
-| `config.database.path` | Database path | `/data/db` |
-| `config.database.namespace` | Database namespace | `nautikal` |
-| `config.database.name` | Database name | `nautikal` |
-| `config.paths.k8sTemplates` | Kubernetes templates directory | `/templates/k8s-templates` |
-| `config.paths.gameServerTemplates` | Game server templates directory | `/templates/game-server-templates` |
+| `config.paths.gameServerTemplates` | Game server templates directory | `""` |
 | `githubToken` | GitHub token for template repositories | `""` |
 | `existingSecret` | Name of existing secret for GitHub token | `""` |
 
@@ -157,7 +151,7 @@ These permissions are required for Nautikalpanel to manage game server resources
 
 ## Persistence
 
-By default, the chart creates a PVC for storing the SurrealDB database. The PVC can be customized via the `persistence` values.
+By default, the chart creates a PVC for the application. The PVC can be customized via the `persistence` values.
 
 ## Accessing Nautikalpanel
 

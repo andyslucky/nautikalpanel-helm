@@ -14,14 +14,7 @@ config:
   kubernetes:
     namespace: nautikal
     defaultStorageClass: ""
-    initTemplate: "default/init.yaml.jinja"
-    podTemplate: "default/pod_template.yaml.jinja"
-  database:
-    path: "/data/db"
-    namespace: nautikal
-    name: nautikal
   paths:
-    k8sTemplates: ""
     gameServerTemplates: ""
   prometheus:
     url: "http://kube-prometheus-stack-prometheus.prometheus.svc.cluster.local:9090"

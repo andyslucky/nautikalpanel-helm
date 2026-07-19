@@ -20,18 +20,6 @@ controllers:
             value: "{{ .Values.config.kubernetes.namespace }}"
           NAUTIKAL__KUBERNETES__DEFAULT_STORAGE_CLASS:
             value: "{{ .Values.config.kubernetes.defaultStorageClass }}"
-          NAUTIKAL__KUBERNETES__INIT_TEMPLATE:
-            value: "{{ .Values.config.kubernetes.initTemplate }}"
-          NAUTIKAL__KUBERNETES__POD_TEMPLATE:
-            value: "{{ .Values.config.kubernetes.podTemplate }}"
-          NAUTIKAL__DATABASE__PATH:
-            value: "{{ .Values.config.database.path }}"
-          NAUTIKAL__DATABASE__NAMESPACE:
-            value: "{{ .Values.config.database.namespace }}"
-          NAUTIKAL__DATABASE__NAME:
-            value: "{{ .Values.config.database.name }}"
-          NAUTIKAL__PATHS__K8S_TEMPLATES:
-            value: "{{ .Values.config.paths.k8sTemplates }}"
           NAUTIKAL__PATHS__GAME_SERVER_TEMPLATES:
             value: "{{ .Values.config.paths.gameServerTemplates }}"
           NAUTIKAL__PROMETHEUS__URL:
